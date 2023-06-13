@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Invoice Print</title>
+  <title>Admin | Impression Factures</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../dashboard/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../dashboard/dist/css/adminlte.min.css">
 </head>
 <body>
 <div class="wrapper">
@@ -114,10 +114,10 @@
       <!-- accepted payments column -->
       <div class="col-6">
         <p class="lead">Payment Methods:</p>
-        <img src="../../dist/img/credit/visa.png" alt="Visa">
-        <img src="../../dist/img/credit/mastercard.png" alt="Mastercard">
-        <img src="../../dist/img/credit/american-express.png" alt="American Express">
-        <img src="../../dist/img/credit/paypal2.png" alt="Paypal">
+        <img src="../../dashboard/dist/img/credit/visa.png" alt="Visa">
+        <img src="../../dashboard/dist/img/credit/mastercard.png" alt="Mastercard">
+        <img src="../../dashboard/dist/img/credit/american-express.png" alt="American Express">
+        <img src="../../dashboard/dist/img/credit/paypal2.png" alt="Paypal">
 
         <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
           Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr
