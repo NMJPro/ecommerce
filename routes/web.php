@@ -13,10 +13,53 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* 
+    vitrine route
+*/
+// page d'acceuil du site
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('vitrine.pages.index');
+})->name('vitrine.index');
 
+// route de listing des produits
+Route::get('/shop', function () {
+    return view('vitrine.pages.shop');
+})->name('vitrine.shop');
+
+// route de filtrage par categorie
+Route::get('/{level1}', function () {
+    return view('vitrines.layouts.categoryLevel1');
+})->name('vitrine.level1');
+
+Route::get('/{level1}/{level2}', function () {
+    return view('vitrines.layouts.categoryLevel1');
+})->name('vitrine.level2');
+
+Route::get('/{level1}/{level2}/{level3}', function () {
+    return view('vitrines.layouts.categoryLevel1');
+})->name('vitrine.level3');
+
+// route de contact des utilisateurs
+Route::get('/contact', function () {
+    return view('vitrines.layouts.contact');
+})->name('vitrine.contact');
+
+Route::get('/detail', function () {
+    return view('vitrines.layouts.detail');
+})->name('vitrine.detail');
+
+Route::get('/cart', function () {
+    return view('vitrines.layouts.shoppingCart');
+})->name('vitrine.cart');
+
+Route::get('/checkout', function () {
+    return view('vitrines.layouts.checkout');
+})->name('vitrine.checkout');
+
+
+
+
+// admin routes
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -43,13 +86,13 @@ Route::middleware([
         return view('dashboard.template.pages.mailbox.readmail');
     })->name('readmail');
     
-    Route::get('statsventes', function () {
+    Route::get('stats/ventes', function () {
         return view('dashboard.template.pages.charts.statsventes');
-    })->name('statsventes');
+    })->name('stats.ventes');
     
-    Route::get('utilisateurs', function () {
+    Route::get('stats/utilisateurs', function () {
         return view('dashboard.template.pages.charts.utilisateurs');
-    })->name('utilisateurs');
+    })->name('stats.users');
     
     Route::get('galerie', function () {
         return view('dashboard.template.pages.galerie');
@@ -79,5 +122,4 @@ Route::middleware([
         return view('dashboard.template.pages.examples.profile');
     })->name('profile');
 });
-
 
