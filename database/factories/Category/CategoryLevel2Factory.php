@@ -1,11 +1,12 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Factories\Category;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category\CategoryLevel2>
  */
 class CategoryLevel2Factory extends Factory
 {
@@ -16,8 +17,10 @@ class CategoryLevel2Factory extends Factory
      */
     public function definition(): array
     {
+        $name = $this->faker->sentence(2, true);
         return [
-            'title' => $this->faker->sentence(2, true), 
+            'title' => $name, 
+            'slug' => Str::slug($name), 
             'description' => $this->faker->paragraph(),
         ];
     }

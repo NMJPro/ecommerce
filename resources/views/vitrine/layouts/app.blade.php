@@ -9,7 +9,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- Favicon -->
-        <link href="vitrine/dist/img/favicon.ico" rel="icon">
+        <link href="/vitrine/dist/img/favicon.ico" rel="icon">
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,9 +19,9 @@
         <!-- Font Awesome -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <!-- Libraries Stylesheet -->
-        <link href="vitrine/dist/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/vitrine/dist/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <!-- Customized Bootstrap Stylesheet -->
-        <link href="vitrine/dist/css/style.css" rel="stylesheet">
+        <link href="/vitrine/dist/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -35,11 +35,11 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="vitrine/dist/lib/easing/easing.min.js"></script>
+        <script src="/vitrine/dist/lib/easing/easing.min.js"></script>
         <!-- Contact Javascript File -->
-        <script src="vitrine/dist/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/vitrine/dist/mail/jqBootstrapValidation.min.js"></script>
         <!-- Template Javascript -->
-        <script src="vitrine/dist/js/main.js"></script>
+        <script src="/vitrine/dist/js/main.js"></script>
         @yield('js')
     </body>
 

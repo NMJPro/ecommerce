@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('category_level2s', function (Blueprint $table) {
             $table->id(); 
-            $table->string('title'); 
+            $table->string('title')->unique();
+            $table->string('slug')->unique();
             $table->text('description');
             $table->timestamps();
             $table->foreignId('category_level1_id')
