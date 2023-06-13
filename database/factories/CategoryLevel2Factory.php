@@ -1,13 +1,13 @@
 <?php
 
-namespace Database\Factories\Categories\Level1;
+namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categories\Level1\CategoryLevel1>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class CategoryLevel1Factory extends Factory
+class CategoryLevel2Factory extends Factory
 {
     /**
      * Define the model's default state.

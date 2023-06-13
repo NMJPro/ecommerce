@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('title'); 
             $table->text('description');
             $table->timestamps();
+            $table->foreignId('category_level1_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Categories\Level1\CategoryLevel1;
-use App\Models\Categories\Level2\CategoryLevel2;
-use App\Models\Categories\Level3\CategoryLevel3;
+use App\Models\CategoryLevel1;
+use App\Models\CategoryLevel2;
+use App\Models\CategoryLevel3;
 
 
 class DatabaseSeeder extends Seeder
@@ -16,9 +16,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        CategoryLevel1::factory(10)->create();
-        CategoryLevel2::factory(10)->create();
-        CategoryLevel3::factory(10)->create();
+        CategoryLevel1::factory()
+        ->has(
+            CategoryLevel2::factory()
+            ->has(
+                CategoryLevel3::factory()
+                ->count(4))
+            ->count(4))
+        ->count(10)
+        ->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
