@@ -2,9 +2,15 @@
 
 namespace Database\Seeders;
 
+<<<<<<< HEAD
 use Illuminate\Database\Seeder;
-use App\Models\category\{Level2 , Level1, Level3};
-use App\Models\produit\{Cart,Product , ProductGallery};
+
+=======
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use App\Models\Category\{CategoryLevel1, CategoryLevel2, CategoryLevel3};
+use App\Models\User;
+>>>>>>> dd23b9601f41037d8ff38f03cba3bf256a702559
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,45 +19,28 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+<<<<<<< HEAD
     
 public function run()
 {
-    
-    Product::factory()->count(10)->create(); 
-    $ids = range(1, 10); 
-    Cart::factory()->count(40)->create()->each(function ($cart) use($ids) {  shuffle($ids);        
-     $cart->products()->attach(array_slice($ids, 0, rand(1, 4))); });
-
-
-
-
-
-    Level1::factory()
-    ->has(
-        Level2::factory()
-        ->has(
-            
-            Level3::factory()
-            
-                ->has( Product::factory() 
-                    
-                    ->has(
-
-                        ProductGallery::factory() 
-                        ->count(4) )
-                    ->count(4)) 
-            ->count(4)
-            
-        )
-        ->count(4)
-    )
-    ->count(10)
-    ->create();
-   
  
-
    
 }
 
 
+=======
+    public function run(): void
+    {
+        User::factory(10)->create();
+        CategoryLevel1::factory()
+        ->has(
+            CategoryLevel2::factory()
+            ->has(
+                CategoryLevel3::factory()
+                ->count(4))
+            ->count(4))
+        ->count(10)
+        ->create();
+    }
+>>>>>>> dd23b9601f41037d8ff38f03cba3bf256a702559
 }
