@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Level1Controller;
+use App\Http\Controllers\Level2Controller;
+use App\Http\Controllers\Level3Controller;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductGalleryController;
+use App\Http\Controllers\CartController;
+
 
 /*
 |--------------------------------------------------------------------------
