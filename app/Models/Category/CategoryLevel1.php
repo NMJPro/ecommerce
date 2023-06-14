@@ -10,7 +10,7 @@ class CategoryLevel1 extends Model
     use HasFactory;
 
     protected $fillable = ['title', 'description'];
-    public function CategoryLevel2s()
+    public function categorylevel2s()
     {
         return $this->hasMany(CategoryLevel2::class);
     }

@@ -17,7 +17,7 @@ class CategoryLevel3Factory extends Factory
      */
     public function definition(): array
     {
-        $name = $this->faker->sentence(2, true);
+        $name = $this->faker->sentence(3, true);
         return [
             'title' => $name, 
             'slug' => Str::slug($name), 

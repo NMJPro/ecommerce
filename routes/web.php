@@ -21,13 +21,18 @@ use App\Http\Controllers\CartController;
 */
 
 // admin routes
+
+Route::get('admin', function () {
+    return view('dashboard.pages.index');
+})->name('admin');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('auth.register');
     })->name('dashboard');
 
 
