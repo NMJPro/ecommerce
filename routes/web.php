@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Category\{CategoryLevel1Controller, CategoryLevel2Controller, CategoryLevel3Controller};
 
 /*
 |--------------------------------------------------------------------------
@@ -120,3 +121,23 @@ Route::get('/checkout', function () {
     return view('vitrines.layouts.checkout');
 })->name('vitrine.checkout');
 
+//Routes CRUD des catégories
+Route::resource('CategoryLevel1', CategoryLevel1Controller::class);
+Route::controller(CategoryLevel1Controller::class)->group(function () {
+    Route::delete('CategoryLevel1s/force/{CategoryLevel1}', 'forceDestroy')->name('CategoryLevel1s.force.destroy');
+    Route::put('CategoryLevel1s/restore/{CategoryLevel1}', 'restore')->name('CategoryLevel1s.restore');
+});
+
+Route::resource('CategoryLevel2', CategoryLevel2Controller::class);
+Route::controller(CategoryLevel2Controller::class)->group(function () {
+    Route::delete('CategoryLevel2s/force/{CategoryLevel2}', 'forceDestroy')->name('CategoryLevel2s.force.destroy');
+    Route::put('CategoryLevel2s/restore/{CategoryLevel2}', 'restore')->name('CategoryLevel2s.restore');
+    Route::get('CategoryLevel1/{slug}/CategoryLevel2s', 'index')->name('CategoryLevel2s.CategoryLevel1');
+});
+
+Route::resource('CategoryLevel3', CategoryLevel3Controller::class);
+Route::controller(CategoryLevel3Controller::class)->group(function () {
+    Route::delete('CategoryLevel3s/force/{CategoryLevel3}', 'forceDestroy')->name('CategoryLevel3s.force.destroy');
+    Route::put('CategoryLevel3s/restore/{CategoryLevel3}', 'restore')->name('CategoryLevel3s.restore');
+    Route::get('CategoryLevel2/{slug}/CategoryLevel3s', 'index')->name('CategoryLevel3s.CategoryLevel2');
+});
