@@ -24,7 +24,7 @@
         <link href="vitrine/dist/css/style.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body> 
         
         @include('vitrines.partials.topbar')
         @include('vitrines.partials.navbar')
