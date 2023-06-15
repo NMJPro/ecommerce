@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Category;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class poiu extends Model
+class Cart extends Model
 {
     use HasFactory;
+    protected $fillable = ['is completed'];
 }

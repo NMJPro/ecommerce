@@ -9,9 +9,18 @@ class CategoryLevel3 extends Model
 {
     use HasFactory;
 
+  
     protected $fillable = ['title', 'description'];
-    public function CategoryLevel2()
+  
+    public function categorylevel2()
     {
         return $this->belongsTo(CategoryLevel2::class);
     }
+
+    
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+  
 }
