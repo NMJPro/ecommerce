@@ -6,12 +6,12 @@
                 <h6 class="m-0">Nos catalogues</h6>
                 <i class="fa fa-angle-down text-dark"></i>
             </a>
-            <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+            <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
                 <div class="navbar-nav w-100 overflow-hidden" style="height: 150px">
                     <div class="nav-item dropdown">
                         <a href="{{ route('vitrine.level1', ['level1'=>'cat1']) }}" class="nav-link" data-toggle="dropdown">Category Level1 <i class="fa fa-angle-down float-right mt-1"></i></a>
                         <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                            <a href="{{ route('vitrine.level2', ['level1'=>'cat1', 'level2'=>'cat20']) }}" class="dropdown-item">Category Level 2</a>
+                            <a href="{{ route('vitrine.level2', ['level1'=>'cat1', 'level2'=>'cat20']) }}" class="dropdown-item gx-40">Category Level 2</a>
                             <a href="{{ route('vitrine.level2', ['level1'=>'cat1', 'level2'=>'cat21']) }}" class="dropdown-item">
                                 <a href="#" class="nav-link" data-toggle="dropdown">category Level2 Child <i class="fa fa-angle-down float-right"></i></a>
                                 <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">

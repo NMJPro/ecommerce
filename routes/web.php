@@ -85,10 +85,30 @@ Route::get('/', function () {
     return view('vitrine.pages.index');
 })->name('vitrine.index');
 
+
+
 // route de listing des produits
 Route::get('/shop', function () {
     return view('vitrine.pages.shop');
 })->name('vitrine.shop');
+
+// route de contact des utilisateurs
+Route::get('/contact', function () {
+    return view('vitrine.pages.contact');
+})->name('vitrine.contact');
+
+Route::get('/detail', function () {
+    return view('vitrines.layouts.detail');
+})->name('vitrine.detail');
+
+Route::get('/cart', function () {
+    return view('vitrines.layouts.shoppingCart');
+})->name('vitrine.cart');
+
+Route::get('/checkout', function () {
+    return view('vitrines.layouts.checkout');
+})->name('vitrine.checkout');
+
 
 // route de filtrage par categorie
 Route::get('/{level1}', function () {
@@ -103,20 +123,4 @@ Route::get('/{level1}/{level2}/{level3}', function () {
     return view('vitrine.pages.shop');
 })->name('vitrine.level3');
 
-// route de contact des utilisateurs
-Route::get('/contact', function () {
-    return view('vitrines.layouts.contact');
-})->name('vitrine.contact');
-
-Route::get('/detail', function () {
-    return view('vitrines.layouts.detail');
-})->name('vitrine.detail');
-
-Route::get('/cart', function () {
-    return view('vitrines.layouts.shoppingCart');
-})->name('vitrine.cart');
-
-Route::get('/checkout', function () {
-    return view('vitrines.layouts.checkout');
-})->name('vitrine.checkout');
 
