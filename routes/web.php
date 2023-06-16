@@ -121,7 +121,7 @@ Route::get('/contact', function () {
 })->name('vitrine.contact');
 
 Route::get('/detail', function () {
-    return view('vitrines.layouts.detail');
+    return view('vitrine.produit.show');
 })->name('vitrine.detail');
 
 Route::get('/cart', function () {
@@ -132,3 +132,4 @@ Route::get('/checkout', function () {
     return view('vitrines.layouts.checkout');
 })->name('vitrine.checkout');
 
+Route::post('/comments/{product}', 'CommentController@store')->name('comments.store');
