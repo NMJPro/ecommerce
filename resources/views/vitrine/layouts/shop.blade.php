@@ -8,6 +8,7 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
 
     <!-- Favicon -->
     <link href="vitrine/dist/img/favicon.ico" rel="icon">

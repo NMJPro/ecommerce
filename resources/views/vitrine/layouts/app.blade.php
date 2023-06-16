@@ -7,6 +7,12 @@
         <meta content="Free HTML Templates" name="keywords">
         <meta content="Free HTML Templates" name="description">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Favicon -->
         <link href="/vitrine/dist/img/favicon.ico" rel="icon">

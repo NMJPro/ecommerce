@@ -91,6 +91,7 @@ Route::get('/', function () {
     return view('vitrine.pages.index');
 })->name('vitrine.index');
 
+Route::resource('products', ProductController::class, ['as' =>'admin.product']);
 // route de listing des produits
 Route::get('/shop', function () {
     return view('vitrine.pages.shop');
@@ -147,3 +148,4 @@ Route::controller(CategoryLevel3Controller::class)->group(function () {
     Route::get('CategoryLevel2/{slug}/CategoryLevel3s', 'index')->name('CategoryLevel3s.CategoryLevel2');
 });
 Route::post('/comments/{product}', 'CommentController@store')->name('comments.store');
+Route::resource('products', ProductController::class);
