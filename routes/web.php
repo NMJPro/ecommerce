@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VitrineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,9 +82,7 @@ Route::middleware([
     vitrine route
 */
 // page d'acceuil du site
-Route::get('/', function () {
-    return view('vitrine.pages.index');
-})->name('vitrine.index');
+Route::get('/', [VitrineController::class, 'index'])->name('vitrine.index');
 
 
 
@@ -111,6 +110,9 @@ Route::get('/checkout', function () {
 
 
 // route de filtrage par categorie
+
+Route::resource('CategoryLevel1', VitrineController::class);
+
 Route::get('/{level1}', function () {
     return view('vitrine.pages.shop');
 })->name('vitrine.level1');

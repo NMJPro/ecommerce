@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
                 CategoryLevel3::factory()
                 ->count(4))
             ->count(4))
-        ->count(10)
+        ->count(20)
         ->create();
     }
 }

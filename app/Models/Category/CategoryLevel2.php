@@ -15,7 +15,7 @@ class CategoryLevel2 extends Model
         return $this->belongsTo(CategoryLevel1::class);
     }
     
-    public function CategoryLevel3s()
+    public function categoryLevel3s()
     {
         return $this->hasMany(CategoryLevel3::class);
     }
