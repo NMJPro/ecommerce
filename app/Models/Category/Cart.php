@@ -1,15 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Category;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class like extends Model
+class Cart extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'value',
-    ];
+    protected $fillable = ['is completed'];
 }

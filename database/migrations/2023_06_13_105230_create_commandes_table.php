@@ -13,18 +13,17 @@ return new class extends Migration
     {
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
-            $table->id();
             $table->foreignId('user_id')
                   ->constrained()
                   ->onUpdate('restrict')
                   ->onDelete('restrict');
-            $table->number();
+            $table->decimal('number');
             $table->foreignId('cart_id')
                   ->constrained()
                   ->onUpdate('restrict')
                   ->onDelete('restrict');
-            $table->price();
-            $table->status();
+            $table->decimal('price');
+            $table->string('statut');;
             $table->timestamps();
         });
     }

@@ -21,7 +21,7 @@ return new class extends Migration
                   ->constrained()
                   ->onUpdate('restrict')
                   ->onDelete('restrict');
-            $table->value();
+            $table->string('value');
             $table->timestamps();
         });
     }

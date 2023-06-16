@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->id();
             $table->foreignId('user_id')
                   ->constrained()
                   ->onUpdate('restrict')
@@ -22,7 +21,7 @@ return new class extends Migration
                   ->constrained()
                   ->onUpdate('restrict')
                   ->onDelete('restrict');
-            $table->subject();
+            $table->string('subject');
             $table->timestamps();
         });
     }

@@ -12,4 +12,8 @@ class comment extends Model
     protected $fillable = [
         'subject',
     ];
+
+    public function commentable(){
+        return $this->morphTo();
+    }
 }

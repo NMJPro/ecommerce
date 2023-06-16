@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('new_letters', function (Blueprint $table) {
             $table->id();
-            $table->email();
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

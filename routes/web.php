@@ -15,13 +15,18 @@ use App\Http\Controllers\Category\{CategoryLevel1Controller, CategoryLevel2Contr
 */
 
 // admin routes
+
+Route::get('admin', function () {
+    return view('dashboard.pages.index');
+})->name('admin');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('auth.register');
     })->name('dashboard');
 
 
@@ -110,7 +115,7 @@ Route::get('/contact', function () {
 })->name('vitrine.contact');
 
 Route::get('/detail', function () {
-    return view('vitrines.layouts.detail');
+    return view('vitrine.produit.show');
 })->name('vitrine.detail');
 
 Route::get('/cart', function () {
@@ -141,3 +146,4 @@ Route::controller(CategoryLevel3Controller::class)->group(function () {
     Route::put('CategoryLevel3s/restore/{CategoryLevel3}', 'restore')->name('CategoryLevel3s.restore');
     Route::get('CategoryLevel2/{slug}/CategoryLevel3s', 'index')->name('CategoryLevel3s.CategoryLevel2');
 });
+Route::post('/comments/{product}', 'CommentController@store')->name('comments.store');
