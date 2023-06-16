@@ -1,14 +1,14 @@
 <?php
 
-namespace Database\Factories\Contacts;
+namespace Database\Factories\Contact;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-use App\Models\Contacts\Contact;
+use App\Models\Contact\Contact;
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Contacts\Contacts>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Contact\Contact>
  */
-class ContactsFactory extends Factory
+class ContactFactory extends Factory
 {
     /**
      * Define the model's default state.

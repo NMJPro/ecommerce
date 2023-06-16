@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Category\{CategoryLevel1, CategoryLevel2, CategoryLevel3};
 use App\Models\User;
-use App\Models\Contacts\Contacts;
+use App\Models\Contact\Contact;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory(10)->create();
-        Contacts::factory(10)->create();
+        Contact::factory(10)->create();
         CategoryLevel1::factory()
         ->has(
             CategoryLevel2::factory()

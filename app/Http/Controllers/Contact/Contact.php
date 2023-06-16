@@ -1,19 +1,25 @@
 <?php
 
-namespace App\Http\Controllers\Contacts;
+namespace App\Http\Controllers\Contact;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Contact\Contact as ContactRequest;
+use App\Models\Contact\Contact;
 use Illuminate\Http\Request;
-use App\Models;
 
-class Contact extends Controller
+
+
+
+
+
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $contact = Contact::withTrashed()->oldest('lastname')->paginate(5);
+        $contact =  Contact::withTrashed()->oldest('title')->paginate(5);
         return view('dashboard.template.pages.examples.contacts', compact('contact'));
         
     }
