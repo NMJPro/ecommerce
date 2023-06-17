@@ -21,7 +21,8 @@ return new class extends Migration
             $table->double('remise');
             $table->string('sku');
             $table->string('garanty');
-            
+             
+
             $table->string('specificity');
             $table->timestamps();
 

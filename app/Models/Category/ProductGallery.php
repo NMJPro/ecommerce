@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProductGallery extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','path', 'rootpath', 'res'];
+    protected $fillable = ['name','path', 'rootpath', 'res','url',];
 
     public function product()
     {

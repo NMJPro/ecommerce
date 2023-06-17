@@ -76,13 +76,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('statsventes')}}" class="nav-link">
+                <a href="{{route('stats.ventes')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ventes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('utilisateurs')}}" class="nav-link">
+                <a href="{{route('stats.users')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Utilisateurs</p>
                 </a>

@@ -97,6 +97,7 @@ Route::get('/', function () {
     return view('vitrine.pages.index');
 })->name('vitrine.index');
 
+Route::resource('products', ProductController::class, ['as' =>'admin.product']);
 // route de listing des produits
 Route::get('/shop', function () {
     return view('vitrine.pages.shop');
@@ -131,4 +132,4 @@ Route::get('/cart', function () {
 Route::get('/checkout', function () {
     return view('vitrines.layouts.checkout');
 })->name('vitrine.checkout');
-
+Route::resource('products', ProductController::class);
