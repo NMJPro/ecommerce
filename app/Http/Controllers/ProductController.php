@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\Product as productRequest;
 use Illuminate\Http\Request;
-use App\Models\Category\{Product, CategoryLevel3,ProductGallery};
+use App\Models\Product\{Product, ProductGallery};
 
 class ProductController extends Controller
 {

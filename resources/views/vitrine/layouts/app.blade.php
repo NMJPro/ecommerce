@@ -30,7 +30,7 @@
         <link href="/vitrine/dist/css/style.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body> 
         
         @include('vitrine.partials.layout.header')
         @yield('content')

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Category\{CategoryLevel1Controller, CategoryLevel2Controller, CategoryLevel3Controller};
+use App\Http\Controllers\VitrineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,9 +88,9 @@ Route::middleware([
     vitrine route
 */
 // page d'acceuil du site
-Route::get('/', function () {
-    return view('vitrine.pages.index');
-})->name('vitrine.index');
+Route::get('/', [VitrineController::class, 'index'])->name('vitrine.index');
+
+
 
 Route::resource('products', ProductController::class, ['as' =>'admin.product']);
 // route de listing des produits
@@ -97,22 +98,9 @@ Route::get('/shop', function () {
     return view('vitrine.pages.shop');
 })->name('vitrine.shop');
 
-// route de filtrage par categorie
-Route::get('/{level1}', function () {
-    return view('vitrine.pages.shop');
-})->name('vitrine.level1');
-
-Route::get('/{level1}/{level2}', function () {
-    return view('vitrine.pages.shop');
-})->name('vitrine.level2');
-
-Route::get('/{level1}/{level2}/{level3}', function () {
-    return view('vitrine.pages.shop');
-})->name('vitrine.level3');
-
 // route de contact des utilisateurs
 Route::get('/contact', function () {
-    return view('vitrines.layouts.contact');
+    return view('vitrine.pages.contact');
 })->name('vitrine.contact');
 
 Route::get('/detail', function () {
@@ -149,3 +137,19 @@ Route::controller(CategoryLevel3Controller::class)->group(function () {
 });
 Route::post('/comments/{product}', 'CommentController@store')->name('comments.store');
 Route::resource('products', ProductController::class);
+
+// route de filtrage par categorie
+
+Route::resource('CategoryLevel1', VitrineController::class);
+
+Route::get('/{level1}', function () {
+    return view('vitrine.pages.shop');
+})->name('vitrine.level1');
+
+Route::get('/{level1}/{level2}', function () {
+    return view('vitrine.pages.shop');
+})->name('vitrine.level2');
+
+Route::get('/{level1}/{level2}/{level3}', function () {
+    return view('vitrine.pages.shop');
+})->name('vitrine.level3');
